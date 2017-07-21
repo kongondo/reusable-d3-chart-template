@@ -1,0 +1,43 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Entity Graph</title>
+  <meta name="description" content="Entity Graph">
+  <meta name="author" content="Patrick Seidler">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/chart.css">
+
+  <script type="text/javascript">
+   window.onload = function() {
+     //Call like this
+     var chart = Chart.instanceOf().width(500);
+     //Or like this
+     //var graph = Chart.instanceOf( { width : 500 } );
+
+      function display(data) {
+        var svg = d3.select("#vis")
+          .datum(data).call(chart.render);
+        //Update Test
+        chart.width(600)
+      }
+
+      d3.json('data/data.json', display);
+    };
+
+  </script>
+</head>
+<body>
+  <div class="container">
+    <h1>Reusable d3 Chart Template</h1>
+    <div id="vis"></div>
+
+    <div class="footer">
+    </div>
+  </div>
+
+  <script src="d3_4_8_0.min.js"></script>
+  <script src="src/chart.js"></script>
+</body>
+</html>
