@@ -1,5 +1,5 @@
-# VALCRI ENTITY GRAPH
+# Description
+=======
 
-Interactive Entity Graph using [D3 version 4](https://d3js.org/).
+Reusable Chart component for D3 - Using factories
 
-## Description
